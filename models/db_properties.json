@@ -1,0 +1,10 @@
+{
+    "props":[
+        {
+            "USER": "user_medreminder",
+            "PWD": "pwd_medreminder",
+            "HOST": "localhost",
+            "DB": "db_medreminder"
+        }
+    ]
+}

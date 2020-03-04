@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+"""DataBase Storage"""
+#from models import *
+from models.db_storage import DBStorage
+from models.patient import Base, Patient
+#from models.prescription import Prescription
+
+x = DBStorage().all_patients()
+y = DBStorage().all_prescription()
+z = DBStorage().all_task_x_prescription()
+zz = DBStorage().all_task()
