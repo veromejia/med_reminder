@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/static/styles/reminder.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/reminder.css') }}?{{ cache_id }}">
     <script src="/static/scripts/reminder.js"></script>
     
     <title>Reminder</title>
@@ -32,22 +32,14 @@
         <label for="controlInput1">Add Medicine</label>
         <input type="addMed" class="form-control" id="controlInput1" placeholder="i.e ibuprofen" required>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <label for="inputTime">Time</label>
-          <input type="time" id="appt" name="appt" required>
-          <!-- <select id="inputHr" class="form-control">
-            <option selected>Choose...</option>
-            <option></option>
-          </select> -->
-        </div>
-        <!--<div class="col-md-4">
-          <label for="inputMin">Minute</label>
-          <select id="inputMin" class="form-control">
-            <option selected>Choose...</option>
-            <option></option>
-          </select>
-        </div> -->
+      <div class="form-group">
+        <label for="controlSelect1">Frequency</label>
+        <select class="form-control" id="controlSelect1">
+          <option selected>Choose...</option>
+            <option>Once a day</option>
+            <option>Twice a day</option>
+            <option>Every 8 hour</option>
+        </select>
       </div>
 
       <div class="form-group">

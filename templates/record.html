@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/styles/record.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/record.css') }}?{{ cache_id }}">
     <title>Welcome!!</title>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Recipient</th>
             <th scope="col">Medication</th>
             <th scope="col">Frequency</th>
             <th scope="col">Date</th>
@@ -27,11 +27,11 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row"></th>
-            {% for recipient in recipients %}
-            <option value="{{ recipient.firstName }}">{{ recipient.firstName }}</option>
-            {% endfor %}
-            <td></td>
+            <th scope="row">1</th>
+            
+            <td>{% for recipient in recipients %}
+              <option value="{{ recipient.firstName }}">{{ recipient.firstName }}</option>
+              {% endfor %}</td>
             <td></td>
             <td></td>
           </tr>
@@ -39,7 +39,7 @@
             <th scope="row">2</th>
             <td></td>
             <td></td>
-            <td></td>
+            <td>sadfds</td>
           </tr>
         </tbody>
       </table>
