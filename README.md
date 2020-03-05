@@ -1,1 +1,1 @@
-# med_reminder
+# MedReminder

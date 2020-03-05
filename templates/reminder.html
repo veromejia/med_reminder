@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/styles/reminder.css">
+    <script src="/static/scripts/reminder.js"></script>
+    
+    <title>Reminder</title>
+  </head>
+  <body>
+    <div class="container">
+    <form>
+      <h1><font face="bradley hand" color="red">Recipient Reminder</font></h1>
+      <div class="form-group">
+        <label for="controlSelect1">Select Recipient</label>
+        <select class="form-control" id="controlSelect1">
+          <option selected>Choose...</option>
+          {% for recipient in recipients %}
+            <option value="{{ recipient.firstName }}">{{ recipient.firstName }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="controlInput1">Add Medicine</label>
+        <input type="addMed" class="form-control" id="controlInput1" placeholder="i.e ibuprofen" required>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="inputTime">Time</label>
+          <input type="time" id="appt" name="appt" required>
+          <!-- <select id="inputHr" class="form-control">
+            <option selected>Choose...</option>
+            <option></option>
+          </select> -->
+        </div>
+        <!--<div class="col-md-4">
+          <label for="inputMin">Minute</label>
+          <select id="inputMin" class="form-control">
+            <option selected>Choose...</option>
+            <option></option>
+          </select>
+        </div> -->
+      </div>
+
+      <div class="form-group">
+        <label for="textArea1">Comment</label>
+        <textarea class="form-control" id="textArea1" rows="2"></textarea>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="startDate">Start Date</label>
+          <input type="date" name="startDate" id="startDate">
+        </div>
+        <div class="col-md-4">
+          <label for="endDate">End Date</label>
+          <input type="date" name="endDate" id="endDate">
+        </div>
+      </div>
+      <input id="submit" type="submit" name="" value= "Submit">
+    </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+   
+  </body>
+</html>
