@@ -92,7 +92,6 @@ six==1.14.0
 SQLAlchemy==1.2.5
 systemd-python==234
 typed-ast==1.4.1
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.21.1
