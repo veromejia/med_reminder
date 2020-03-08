@@ -93,7 +93,6 @@ SQLAlchemy==1.2.5
 systemd-python==234
 typed-ast==1.4.1
 urllib3==1.21.1
-usb-creator==0.3.3
 virtenv==0.3.1
 virtualenv==20.0.5
 visitor==0.1.3
