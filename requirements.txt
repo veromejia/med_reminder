@@ -102,7 +102,6 @@ webencodings==0.5
 Werkzeug==0.12.2
 wrapt==1.11.2
 WTForms==2.2.1
-xkit==0.0.0
 yaspin==0.16.0
 zipp==2.2.0
 zope.interface==4.3.2
