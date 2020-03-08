@@ -16,7 +16,6 @@ crayons==0.3.0
 cryptography==2.8
 cupshelpers==1.0
 defer==1.0.6
-distlib==0.3.0
 distro-info===0.18ubuntu0.18.04.1
 dominate==2.4.0
 Fabric3==1.13.1.post1
