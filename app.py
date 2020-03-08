@@ -1,36 +1,52 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, url_for,redirect, request
+from forms.patientform import PatientForm
+from forms.prescriptionform import PrescriptionForm
+
 app = Flask(__name__)
-port = 5050
-host = "0.0.0.0"
-recipients = []
+app.config['SECRET_KEY'] = 'e045fd27f61b2a04b5edbb45fa1350045fe8eb10653be9631d422f6427ba77b6'
 
-@app.route("/", strict_slashes=False)
+@app.route('/',methods=['POST','GET'])
+@app.route('/home', methods=['POST','GET'])
 def home():
-  return render_template("/welcome.html")
+    if request.method == 'POST':
+        if request.form['submit'] == 'ADD PATIENT':
+            return redirect( url_for('recipient') )
+        
+        if request.form['submit'] == 'ADD REMINDER':
+            return redirect( url_for('reminder') )
+    
+    return render_template("/welcome.html")
 
-@app.route("/recipient/", strict_slashes=False)
+@app.route('/recipient/',methods=['POST','GET'])
 def recipient():
-  return render_template("/recipient.html")
+    form = PatientForm()
+    if form.validate_on_submit():
+        form.save()
+        return redirect( url_for('home') )
+    return render_template('recipient.html',form=form)
 
-@app.route("/reminder/", strict_slashes=False)
+@app.route('/reminder', methods=['POST','GET'])
 def reminder():
-  return render_template("/reminder.html", recipients=recipients)
+    form = PrescriptionForm()
+    form.getPatients()
+    print(form.printObj())
+    print(form.start_dt.data)
+    print(form.end_dt.data)
+    print(form.validate_on_submit())
 
-@app.route("/record/", strict_slashes=False)
-def record():
-  return render_template("/record.html", recipients=recipients)
+    if request.method == 'POST':
+        if form.validateForm():
+            form.save()
+            return redirect( url_for('home') )
 
-@app.route("/recipient/", methods=["POST"], strict_slashes=False)
-def input_reciever():
-  data = request.get_json()
-  recipients.append(data)
-  return "OK"
+    #if form.validate_on_submit():
+    #    form.save()
+    #    return redirect( url_for('home') )
 
-@app.route("/reminder/", methods=["POST"], strict_slashes=False)
-def input_reminder():
-  data = request.get_json()
-  print(data)
-  return "OK"
+    #if request.method == 'POST':
+    #    if request.form['submit'] == 'HOME':
+    #        return redirect( url_for('home') )
+    return render_template('reminder.html', form=form)
 
-if __name__ == '__main__':
-  app.run(host=host, port=port)
+
+ # env FLASK_APP=app.py FLASK_DEBUG=1 flask run 

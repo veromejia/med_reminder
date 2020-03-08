@@ -2,18 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}?{{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
   
     
     <title>MedReminder</title>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <SCRIPT src="/static/scripts/recipient.js"></SCRIPT>
+    
   </head>
   <body>
-    
- <form class="box" action="/recipient" method="POST">
+<div class="box">
+ <form action="" method="POST">
+    {{ form.hidden_tag() }}
+    {{form.firstName.label()}}
+     {{ form.firstName() }}
 
+
+     {{form.lastname.label()}}
+     {{ form.lastname() }}
+
+
+     {{form.email.label()}}
+     {{ form.email() }}
+
+     {{form.phone_no.label()}}
+     {{ form.phone_no() }}
+     {{form.submit()}}
+
+     
+     <!--
       <h1><font face="bradley hand" color="red">Recipient Information</font></h1>
       <label>First Name</label>
       <input id="firstName" type="text" name="" placeholder="ie: John" required>
@@ -26,9 +42,9 @@
       <!--input type="text" name="" placeholder="Location  ex:SF"-->
       
       </div>
-      <input id="submit" type="submit" name="" value= "NEXT">
+      
  </form>
-
+</div>
  
  
   </body>

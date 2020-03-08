@@ -1,67 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">   
+    <link rel="stylesheet" type="text/css" href="/static/styles/reminder.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method='POST'>
+        {{ form.hidden_tag() }}
+        <div class="container">
+            <h1><font face="bradley hand" color="red">Recipient Reminder</font></h1>
+            
+                <div class="form-group">
+                {{form.patients.label()}}
+                    {% if form.patients.errors %}
+                    
+                    <div class="invalid-feedback">
+                        {% for error in form.patients.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.patients(class = "form-control")}}
+                {% endif %}    
+                </div>
+                
+                <br/><br/>
 
-    <!-- Bootstrap CSS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/reminder.css') }}?{{ cache_id }}">
-    <script src="/static/scripts/reminder.js"></script>
-    
-    <title>Reminder</title>
-  </head>
-  <body>
-    <div class="container">
-    <form>
-      <h1><font face="bradley hand" color="red">Recipient Reminder</font></h1>
-      <div class="form-group">
-        <label for="controlSelect1">Select Recipient</label>
-        <select class="form-control" id="controlSelect1">
-          <option selected>Choose...</option>
-          {% for recipient in recipients %}
-            <option value="{{ recipient.firstName }}">{{ recipient.firstName }}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="controlInput1">Add Medicine</label>
-        <input type="addMed" class="form-control" id="controlInput1" placeholder="i.e ibuprofen" required>
-      </div>
-      <div class="form-group">
-        <label for="controlSelect1">Frequency</label>
-        <select class="form-control" id="controlSelect1">
-          <option selected>Choose...</option>
-            <option>Once a day</option>
-            <option>Twice a day</option>
-            <option>Every 8 hour</option>
-        </select>
-      </div>
+                <div class="form-group">
+                    {{form.medication.label()}}
+                {% if form.medication.errors %}
+                    
+                    <div class="invalid-feedback">
+                        {% for error in form.medication.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.medication(class = "form-control")}} 
+                {% endif %}
 
-      <div class="form-group">
-        <label for="textArea1">Comment</label>
-        <textarea class="form-control" id="textArea1" rows="2"></textarea>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <label for="startDate">Start Date</label>
-          <input type="date" name="startDate" id="startDate">
-        </div>
-        <div class="col-md-4">
-          <label for="endDate">End Date</label>
-          <input type="date" name="endDate" id="endDate">
-        </div>
-      </div>
-      <input id="submit" type="submit" name="" value= "Submit">
+                </div>
+                
+                <div class="form-group">
+                    {{form.frequency.label()}}
+                {% if form.frequency.errors %}
+                    
+                    <div class="invalid-feedback">
+                        {% for error in form.frequency.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.frequency(class = "form-control")}}
+                {% endif %}
+
+                    
+                </div>
+                
+                <div class="form-group">
+                    {{form.start_dt.label()}}
+                {% if form.start_dt.errors %}
+                    
+                    <div class="invalid-feedback">
+                        {% for error in form.start_dt.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.start_dt(class = "form-control")}}
+                {% endif %}
+                    
+                </div>
+
+                <div class="form-group">
+                    {{ form.end_dt.label() }}
+                {% if form.end_dt.errors %}
+                    
+                    <div class="invalid-feedback">
+                        {% for error in form.end_dt.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.end_dt(class = "form-control")}}
+                {% endif %}
+
+                    
+                </div>
+
+                <div class="form-group">
+                    {{form.noti_type.label()}}
+                {% if form.noti_type.errors %}
+                    
+                    <div class="invalid-feedback">
+                        {% for error in form.noti_type.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.noti_type(class = "form-control")}}
+                {% endif %}
+
+                   
+                </div>
+
+            {{form.submit}}    
+              
+        </div>    
     </form>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
-   
-  </body>
+</body>
 </html>
