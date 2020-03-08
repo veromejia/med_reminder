@@ -13,7 +13,6 @@ Click==7.0
 colorama==0.4.3
 crayons==0.3.0
 cryptography==2.8
-cupshelpers==1.0
 defer==1.0.6
 distro-info===0.18ubuntu0.18.04.1
 dominate==2.4.0
