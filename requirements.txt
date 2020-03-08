@@ -68,7 +68,6 @@ pycairo==1.16.2
 pycparser==2.19
 pycrypto==2.6.1
 pycups==1.9.73
-pygobject==3.26.1
 PyJWT==1.7.1
 pylint==2.4.4
 pymacaroons==0.13.0
