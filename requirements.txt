@@ -80,7 +80,7 @@ python-debian==0.1.32
 pythonfinder==1.2.1
 pytz==2019.3
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.1
 reportlab==3.4.0
 requests==2.17.3
 requests-oauthlib==0.8.0
