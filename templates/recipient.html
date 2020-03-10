@@ -1,51 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
-  
-    
-    <title>MedReminder</title>
 
-    
-  </head>
-  <body>
-<div class="box">
- <form action="" method="POST">
-    {{ form.hidden_tag() }}
-    {{form.firstName.label()}}
-     {{ form.firstName() }}
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
+  <title>MedReminder</title>
+</head>
+
+<body>
+  <form method='POST'>
+    <div class="box">
+      {{ form.hidden_tag() }}
+      {{form.firstName.label()}}
+      {{ form.firstName() }}
 
 
-     {{form.lastname.label()}}
-     {{ form.lastname() }}
+      {{form.lastname.label()}}
+      {{ form.lastname() }}
 
 
-     {{form.email.label()}}
-     {{ form.email() }}
+      {{form.email.label()}}
+      {{ form.email() }}
 
-     {{form.phone_no.label()}}
-     {{ form.phone_no() }}
-     {{form.submit()}}
+      {{form.phone_no.label()}}
+      {{ form.phone_no() }}
+      {{form.submit()}}
+    </div>
+  </form>
+</body>
 
-     
-     <!--
-      <h1><font face="bradley hand" color="red">Recipient Information</font></h1>
-      <label>First Name</label>
-      <input id="firstName" type="text" name="" placeholder="ie: John" required>
-      <label>Last Name</label>
-      <input id="lastName" type="text" name="" placeholder="ie: Smith" required>
-      <label>Birthdate</label>
-      <input id="birthDate" type="text" name="" placeholder="mm/dd/yyyy" required>
-      <label>Phone Number</label>
-      <input id="phoneNumber" type="text" name="" placeholder="xxx-xxx-xxxx" required>
-      <!--input type="text" name="" placeholder="Location  ex:SF"-->
-      
-      </div>
-      
- </form>
-</div>
- 
- 
-  </body>
 </html>

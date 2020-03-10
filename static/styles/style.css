@@ -23,7 +23,7 @@ body{
 .box h1{
     color:red;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
 }
 .box input[type ="text"],.box input[type = "password"]{
     border:0;

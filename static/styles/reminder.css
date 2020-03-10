@@ -9,6 +9,7 @@ body{
 .container{
   width: 40%;
   /*padding: 40px;*/
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,7 +24,7 @@ body{
 .container h1{
   color:red;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .container input[type = "submit"]{
