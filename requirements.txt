@@ -60,7 +60,7 @@ paramiko==2.7.1
 pathlib2==2.3.5
 pep8==1.7.0
 pexpect==4.2.1
-Pillow==5.1.0
+Pillow==6.2.0
 protobuf==3.11.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
