@@ -99,7 +99,7 @@ visitor==0.1.3
 vistir==0.5.0
 wadllib==1.3.2
 webencodings==0.5
-Werkzeug==0.12.2
+Werkzeug==0.15.3
 wrapt==1.11.2
 WTForms==2.2.1
 yaspin==0.16.0
