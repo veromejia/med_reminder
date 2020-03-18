@@ -11,15 +11,15 @@ Veronica's mother has diabetes and she continously asked Veronica to send a text
 
 ### Architecture
 
-<img src="https://holberton-students.slack.com/files/UHDLUNV8E/F0109GTNEVC/prueba.jpeg" />
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/Data%20Modeling.png" />
 
 ## Installation
 `$ sudo apt-get install python3-venv`
-(venv) `$ pip install Flask`
+`$ pip install Flask`
 `$ pip intall Jinja2`
 `$ sudo apt-get install mysql-server`
 `$ pip install SQLAlchemy`
-## Features (pics)
+## Demo Features (pics)
 ## Setup
 ## Authors
 * Veronica Mejia [Github](https://github.com/veromejia)
