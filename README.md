@@ -4,8 +4,15 @@ MedReminder is a web application that can send text message to patients who need
 ## Inspiration
 Veronica's mother has diabetes and she continously asked Veronica to send a text as a reminder to take her medication daily, but Veronica can not keep track of that since she is occupied with her busy schedule as well. This is when the idea of MedReminder emerged.
 ## Composition
-### Tools (pics)
-### Architecture (pic)
+### Tools
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/front-end.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/back-end.png" />
+
+### Architecture
+
+<img src="https://holberton-students.slack.com/files/UHDLUNV8E/F0109GTNEVC/prueba.jpeg" />
+
 ## Installation
 `$ sudo apt-get install python3-venv`
 (venv) `$ pip install Flask`
