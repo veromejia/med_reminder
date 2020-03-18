@@ -10,16 +10,39 @@ Veronica's mother has diabetes and she continously asked Veronica to send a text
 <img src="https://github.com/veromejia/med_reminder/blob/master/Images/back-end.png" />
 
 ### Architecture
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/Architecture.png" />
 
 <img src="https://github.com/veromejia/med_reminder/blob/master/Images/Data%20Modeling.png" />
 
 ## Installation
 `$ sudo apt-get install python3-venv`
+
 `$ pip install Flask`
+
 `$ pip intall Jinja2`
+
 `$ sudo apt-get install mysql-server`
+
 `$ pip install SQLAlchemy`
-## Demo Features (pics)
+
+`$ pip install python-crontab`
+
+`$ pip install twilio`
+
+## Demo Features
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/landing%20page.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/About%20us.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/features.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/Demo%20page.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/Recipient%20info.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/Reminder%20info.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/Dashboard%20record.png" />
 ## Setup
 ## Authors
 * Veronica Mejia [Github](https://github.com/veromejia)
