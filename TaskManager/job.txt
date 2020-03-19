@@ -1,0 +1,48 @@
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 14:56:24.284601
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 14:56:25.018267
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 14:59:02.468442
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 14:59:02.977419
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 14:59:02.382954
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 14:59:02.973781
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 14:59:02.610297
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 14:59:03.150754
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 14:59:02.594123
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 14:59:03.350329
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 15:00:02.294810
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 15:00:02.878192
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 15:00:02.393169
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 15:00:03.015532
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 15:00:02.477586
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 15:00:03.055687
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 15:00:02.627509
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 15:00:03.194037
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 16:15:53.680303
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 16:15:54.258974
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 16:59:02.027281
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 16:59:02.573742
+Message successfully sent to the patient: 2 acces date:
+Sending message to the patient: 1 prescription: ibuprofen Access Date: 2020-03-16 17:00:01.964929
+Message successfully sent to the patient: 1 acces date:
+Sending message to the patient: 2 prescription: acetaminophen Access Date: 2020-03-16 17:00:02.497790
+Message successfully sent to the patient: 2 acces date:

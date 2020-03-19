@@ -1,0 +1,109 @@
+{%extends "layout.html"%}
+{% block content %}
+
+<form action="/dashboard" method="POST">
+    <div class="box" style="opacity:0.9">
+        <h1>Dashboard!</h1>
+
+        <div class="row">
+            <div class="card col-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Patients.</h3>
+                    <!--<div class="d-flex justify-content-center">-->
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">name</th>
+                                <th scope="col">last name</th>
+                                <th scope="col">phone</th>
+                                <th scope="col">email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for patient in form.patients %}
+                            <tr>
+                                <th scope="row"><a class="btn btn-primary"
+                                        href={{url_for('dashboard',patientID=patient.id,taskID=0)}}>{{patient.id}}</a>
+                                </th>
+
+                                <td>{{patient.name}}</td>
+                                <td>{{patient.last_name}}</td>
+                                <td>{{patient.phone}}</td>
+                                <td>{{patient.email}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <!-- </div>-->
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="card col-md" style="width: 30rem; overflow: auto;">
+                <div class="card-header">
+                    Prescriptions
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Prescription</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for prescription in prescriptions %}
+                            <tr>
+                                <th scope="row"><a class="btn btn-primary"
+                                        href={{url_for('dashboard',patientID=form.selectedid,taskID=prescription.id)}}>{{prescription.id}}</a>
+                                </th>
+                                <td>Take {{prescription.medication}} every {{prescription.frequency}} hours</td>
+
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card col-sm">
+                <div class="card-header">
+                    Alerts
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Alert</th>
+                                <th scope="col">Last Sent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for task in tasks %}
+                            <tr>
+                                <th scope="row"><a class="btn btn-primary" href="#">{{task[2]}}</a></th>
+                                <td>{{task[3]}}</td>
+
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</form>
+
+
+{%endblock content%}

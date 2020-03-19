@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
-  <title>Welcome!!</title>
-</head>
-
-<body>
-  <form action="" method='POST'>
-    <div class="box">
-      <h1>
-        <font face="bradley hand" color="red">Welcome to Demo of MedReminder</font>
-      </h1>
-      <!--input type="text" name="" placeholder="Location  ex:SF"-->
-      <input type="submit" name="submit" value="ADD PATIENT">
-      <input type="submit" name="submit" value="ADD REMINDER">
-    </div>
-  </form>
-
-</body>
-
-</html>
+{%extends "layout.html"%}
+{% block content %}
+<form action="" method='POST'>
+  <div class="box">
+    <h1>
+      <font face="bradley hand" color="red">Welcome to Demo of MedReminder</font>
+    </h1>
+    <!--input type="text" name="" placeholder="Location  ex:SF"-->
+    <input type="submit" name="submit" value="ADD PATIENT">
+    <input type="submit" name="submit" value="ADD REMINDER">
+    <input type="submit" name="submit" value="DASHBOARD">
+  </div>
+</form>
+{%endblock content%}

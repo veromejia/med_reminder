@@ -1,70 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends "layout.html"%}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/static/styles/reminder.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <form action="" method='POST'>
+<form action="" method='POST'>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href={{ url_for('home') }}>
+            <i class="fas fa-home"></i>
+        </a>
+    </nav>
+    <div class="container-2" style="opacity: 0.9;">
         {{ form.hidden_tag() }}
-        <div class="box">
+        {% with messages = get_flashed_messages( with_categories = true ) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form>
             <h1>
                 <font face="bradley hand" color="red">Recipient Reminder</font>
             </h1>
-
-            <div class="form-group">
+            <div class="form-group row d-flex justify-content-center">
                 {{form.patients.label()}}
                 {% if form.patients.errors %}
-
+                <div class="col-sm-5">{{form.patients(class = "form-control")}}</div>
                 <div class="invalid-feedback">
                     {% for error in form.patients.errors %}
                     <span>{{ error }}</span>
                     {% endfor %}
                 </div>
                 {% else %}
-                {{form.patients(class = "form-control")}}
+                <div class="col-sm-5">{{form.patients(class = "form-control")}}</div>
                 {% endif %}
             </div>
 
-            <br/><br />
-
-            <div class="form-group">
+            <div class="form-group row d-flex justify-content-center">
                 {{form.medication.label()}}
                 {% if form.medication.errors %}
-
+                <div class="col-sm-5">{{form.medication(class = "form-control")}}</div>
                 <div class="invalid-feedback">
                     {% for error in form.medication.errors %}
                     <span>{{ error }}</span>
                     {% endfor %}
                 </div>
                 {% else %}
-                {{form.medication(class = "form-control")}}
+                <div class="col-sm-5">{{form.medication(class = "form-control")}}</div>
                 {% endif %}
 
             </div>
 
-            <div class="form-group">
+            <div class="form-group row d-flex justify-content-center">
                 {{form.frequency.label()}}
-                {% if form.frequency.errors %}
 
+                {% if form.frequency.errors %}
+                <div class="col-sm-5">{{form.frequency(class = "form-control")}}</div>
                 <div class="invalid-feedback">
                     {% for error in form.frequency.errors %}
                     <span>{{ error }}</span>
                     {% endfor %}
                 </div>
                 {% else %}
-                {{form.frequency(class = "form-control")}}
+                <div class="col-sm-5">{{form.frequency(class = "form-control")}}</div>
                 {% endif %}
 
 
             </div>
 
-            <div class="form-group">
+            <div class="form-group row d-flex justify-content-center">
                 {{form.start_dt.label()}}
                 {% if form.start_dt.errors %}
 
@@ -74,12 +78,12 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{form.start_dt(class = "form-control")}}
+                <div class="col-sm-5">{{form.start_dt()}}</div>
                 {% endif %}
 
             </div>
 
-            <div class="form-group">
+            <div class="form-group row d-flex justify-content-center">
                 {{ form.end_dt.label() }}
                 {% if form.end_dt.errors %}
 
@@ -89,13 +93,16 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{form.end_dt(class = "form-control")}}
+                <div class="col-sm-5">
+                    {{form.end_dt()}}
+                </div>
+
                 {% endif %}
 
 
             </div>
 
-            <div class="form-group">
+            <div class="form-group row d-flex justify-content-center">
                 {{form.noti_type.label()}}
                 {% if form.noti_type.errors %}
 
@@ -105,15 +112,15 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{form.noti_type(class = "form-control")}}
+                <div class="col-sm-5">
+                    {{form.noti_type(class = "form-control")}}
+                </div>
                 {% endif %}
             </div>
 
             {{form.submit}}
+        </form>
+    </div>
 
-        </div>
-    </form>
-
-</body>
-
-</html>
+</form>
+{%endblock content%}

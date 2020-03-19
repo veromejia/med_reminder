@@ -58,4 +58,3 @@ Veronica's mother has diabetes and she continously asked Veronica to send a text
 ## Authors
 * Veronica Mejia [Github](https://github.com/veromejia)
 * Hanh Nguyen [Github](https://github.com/hanhuyeny2k)
-
