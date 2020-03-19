@@ -43,7 +43,18 @@ Veronica's mother has diabetes and she continously asked Veronica to send a text
 <img src="https://github.com/veromejia/med_reminder/blob/master/Images/Reminder%20info.png" />
 
 <img src="https://github.com/veromejia/med_reminder/blob/master/Images/Dashboard%20record.png" />
-## Setup
+
+## Setup and Testing
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/backend1.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/backend2.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/backend3.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/backend4.png" />
+
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/backend5.png" />
+
 ## Authors
 * Veronica Mejia [Github](https://github.com/veromejia)
 * Hanh Nguyen [Github](https://github.com/hanhuyeny2k)
