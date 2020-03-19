@@ -9,7 +9,7 @@ from datetime import datetime
 
 
 class Prescription(Base):
-    """Class that represent the prescription table"""
+    """class that represent table prescription"""
     __tablename__ = 'prescription'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
     patient_id = Column(Integer, ForeignKey('patient.id'), nullable=False)

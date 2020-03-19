@@ -1,32 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
-  <title>MedReminder</title>
-</head>
-
-<body>
-  <form method='POST'>
-    <div class="box">
-      {{ form.hidden_tag() }}
-      {{form.firstName.label()}}
-      {{ form.firstName() }}
-
-
-      {{form.lastname.label()}}
-      {{ form.lastname() }}
+{%extends "layout.html"%}
+{% block content %}
+<form method='POST'>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href={{ url_for('home') }}>
+      <i class="fas fa-home"></i>
+    </a>
+  </nav>
+  <div class="box">
+    {{ form.hidden_tag() }}
+    <h1>
+      <font face="bradley hand" color="red">Recipient Reminder</font>
+    </h1>
+    {{form.firstName.label()}}
+    {{ form.firstName(class="mycontrol") }}
 
 
-      {{form.email.label()}}
-      {{ form.email() }}
+    {{form.lastname.label()}}
+    {{ form.lastname() }}
 
-      {{form.phone_no.label()}}
-      {{ form.phone_no() }}
-      {{form.submit()}}
-    </div>
-  </form>
-</body>
 
-</html>
+    {{form.email.label()}}
+    {{ form.email() }}
+
+    {{form.phone_no.label()}}
+    {{ form.phone_no() }}
+    {{form.submit(class="btn")}}
+  </div>
+</form>
+{%endblock content%}

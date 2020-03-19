@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship
 
 
 class Task_x_prescription(Base):
-    """class that represent the task_x_prescription table"""
+    """class that represent Task_x_prescription table"""
     __tablename__ = 'task_x_prescription'
     task_id = Column(Integer, ForeignKey(
         'task.id'), primary_key=True, nullable=False,)
