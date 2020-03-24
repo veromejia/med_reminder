@@ -1,3 +1,8 @@
+
+#!/usr/bin/python3
+"""
+Flask App that integrates with static HTML Template
+"""
 from flask import Flask, render_template, url_for, flash, redirect, request
 from forms.patientform import PatientForm
 from forms.prescriptionform import PrescriptionForm
@@ -11,11 +16,17 @@ app.config['SECRET_KEY'] = mykey
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/landingpage', methods=['POST', 'GET'])
 def home():
+    """
+    function linked to root and landing page
+    """
     return render_template("landingpage.html")
 
 
 @app.route('/welcome', methods=['POST', 'GET'])
 def welcome():
+    """
+    function linked to the welcome page
+    """
     if request.method == 'POST':
         if request.form['submit'] == 'ADD PATIENT':
             return redirect(url_for('recipient'))
@@ -30,6 +41,9 @@ def welcome():
 
 @app.route('/recipient', methods=['POST', 'GET'])
 def recipient():
+    """
+    function linked to root and landing page
+    """
     form = PatientForm()
     if form.validate_on_submit():
         form.save()
@@ -39,6 +53,9 @@ def recipient():
 
 @app.route('/reminder', methods=['POST', 'GET'])
 def reminder():
+    """
+    function linked to reminder page
+    """
     form = PrescriptionForm()
     form.getPatients()
 
@@ -60,6 +77,9 @@ def reminder():
     'patientID': 0, 'taskID': 0}, methods=['POST', 'GET'])
 @app.route('/dashboard2/<int:patientID>/<int:taskID>', methods=['POST', 'GET'])
 def dashboard(patientID, taskID):
+    """
+    function linked to dashboard page
+    """
     form = DashBoardForm()
     prescriptions = []
     tasks = []
@@ -75,11 +95,17 @@ def dashboard(patientID, taskID):
 
 @app.route('/about', methods=['POST', 'GET'])
 def about():
+    """
+    function linked to about page
+    """
     return render_template('about.html')
 
 
 @app.route('/features', methods=['POST', 'GET'])
 def features():
+    """
+    function linked to features page
+    """
     return render_template('features.html')
 
 if __name__ == "__main__":

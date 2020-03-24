@@ -32,27 +32,28 @@ class DBStorage:
         self.__session = Session()
 
     def get_session(self):
-        """ to get the current session of the db"""
+        """function to get the current session of the db"""
         return self.__session
 
     def all_patients(self):
-        """to get an specific patient identify by id"""
+        """function to get an specific patient identify by id"""
         patients = self.__session.query(Patient).order_by(Patient.id).all()
         return patients
 
     def all_patients_by_id(self, id):
-        """to get all the prescription of the table prescription"""
+        """function to get all the prescription of the table prescription"""
         patients = self.__session.query(Patient).filter(Patient.id == id).one()
         return patients
 
     def all_prescription(self):
-        """to get all the prescription of the table prescription"""
+        """function to get all the prescription of the table prescription"""
         new_prescription = self.__session.query(
             Prescription).order_by(Prescription.id).all()
         self.__session.close()
         return new_prescription
 
     def prescriptionXpatientID(self, id):
+        """function to get a prescription per patient ordered by id"""
         prescriptions = Prescription()
         try:
             patient = self.__session.query(
@@ -64,15 +65,12 @@ class DBStorage:
         return prescriptions
 
     def all_task(self):
+        """function that return all the tasks"""
         new_task = self.__session.query(Task).order_by(Task.id).all()
         return new_task
-        """for task in self.__session.query(
-                Task).order_by(Task.id).all():
-            print("{}: {}".format(task.id, task.status))"""
-        self.__session.close()
 
     def task_by_command(self, command):
-        """return all task that have the same command """
+        """return all task that have the same command"""
         query = self.__session.query(Task).filter(
             Task.task_command == command).all()
         return query

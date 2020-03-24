@@ -1,6 +1,7 @@
+<!--navigation bar template-->
 {%extends "layout.html"%}
 {% block content %}
-
+<!--Main form-->
 <form action="/dashboard" method="POST">
     <div class="box" style="opacity:0.9">
         <h1>Dashboard!</h1>
@@ -9,7 +10,7 @@
             <div class="card col-sm">
                 <div class="card-body">
                     <h3 class="card-title">Patients.</h3>
-                    <!--<div class="d-flex justify-content-center">-->
+                    <!--content table to show patient information-->
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -26,7 +27,6 @@
                                 <th scope="row"><a class="btn btn-primary"
                                         href={{url_for('dashboard',patientID=patient.id,taskID=0)}}>{{patient.id}}</a>
                                 </th>
-
                                 <td>{{patient.name}}</td>
                                 <td>{{patient.last_name}}</td>
                                 <td>{{patient.phone}}</td>
@@ -35,7 +35,6 @@
                             {% endfor %}
                         </tbody>
                     </table>
-                    <!-- </div>-->
 
                 </div>
             </div>
@@ -49,6 +48,7 @@
                     Prescriptions
                 </div>
                 <div class="card-body">
+                    <!--content table to show the prescriptions by patien id-->
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -76,6 +76,7 @@
                     Alerts
                 </div>
                 <div class="card-body">
+                    <!--content table to show the last alert by prescrition and patien id-->
                     <table class="table table-hover">
                         <thead>
                             <tr>

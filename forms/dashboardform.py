@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask_wtf import FlaskForm
 from wtforms import *
 from wtforms.fields.html5 import DateField
