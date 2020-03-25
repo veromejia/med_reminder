@@ -1,5 +1,10 @@
 # MedReminder
 
+<p align="center">
+<img src="https://github.com/veromejia/med_reminder/blob/master/Images/medlogo.jpg" height="70%" width="70%"/>
+</p>
+
+
 ## Description
 MedReminder is a web application that can send text message to patients who needed reminder to take their medication daily. User can enter the recipient's information and fill out a reminder page which allows the app to know what medication, the frequency and also the duration of this medication for each recipient.
 
