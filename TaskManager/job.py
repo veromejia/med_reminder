@@ -22,7 +22,7 @@ db = DBStorage()
 def sendmail(email, prescription, frequency):
     """ function to send a email usign prot 465 and a gmail account"""
     port = 465
-    sender = 'medreminderapp431@gmail.com'
+    sender = 'myEmail@gmail.com'
     password = 'myEmailPassword'
     recieve = email
     message = """
@@ -56,7 +56,7 @@ for prescription in db.all_prescription():
             myfile.write(message)
             client.messages.create(
                 to=patient.phone,
-                from_="12056516878",
+                from_="myTwilioPhoneNumber",
                 body="Don't forget take your {} every {} hours".format(
                     prescription.medication, prescription.frequency))
             message = "Message successfully sent to patient:"
